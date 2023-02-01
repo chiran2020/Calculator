@@ -14,7 +14,7 @@ let AddBtn = document.querySelector('#btn'); // Add button
 let subractBtn = document.querySelector('#subBtn'); // Subract button
 let divideBtn = document.querySelector('#divide'); // Divide button
 let multiplyBtn = document.querySelector('#multiply'); // Multiply button
-let total = 'Total: '; // To show Total: and results. add this with TextContent
+let total = 'Answer: '; // To show Total: and results. add this with TextContent
 
 // ADD
 let add = function () {
@@ -22,7 +22,7 @@ let add = function () {
   let firstnum = document.getElementById('firstnum').valueAsNumber;
   let secnum = document.getElementById('secnumber').valueAsNumber;
   let add = firstnum + secnum;
-  Total.textContent = total + add;
+  Total.textContent = total +  add;
 };
 AddBtn.addEventListener('click', add);
 
@@ -40,7 +40,8 @@ let divide = function () {
   let firstnum = document.getElementById('firstnum').valueAsNumber;
   let secnum = document.getElementById('secnumber').valueAsNumber;
   let divide = firstnum / secnum;
-  Total.textContent = total + divide;
+  let  RoundToTwoDecimal = divide.toFixed(2)
+  Total.textContent = total +  RoundToTwoDecimal;
 };
 divideBtn.addEventListener('click', divide);
 
